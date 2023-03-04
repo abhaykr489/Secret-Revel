@@ -25,7 +25,6 @@ const userSchema = new mongoose.Schema({
     password: String
 });
 //encrypt password using secret string
-//const secret = "ilovemoneyandwanttoberich.";
 
 userSchema.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ["password"] });
 //create user model
